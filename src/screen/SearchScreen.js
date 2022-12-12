@@ -154,7 +154,6 @@ const styles = StyleSheet.create({
   ImageBackground: {
     width: 290,
     height: 330,
-    // marginHorizontal:25
   },
   SecndContainer: {
     marginRight: 30,
@@ -213,10 +212,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 25,
     alignItems: 'center',
     paddingTop: 15,
-    // backgroundColor:'#4E7CC2'
   },
-  MainText: {
-    // backgroundColor: '#F4F7FD',
-    // height:180
-  },
+  
 });
