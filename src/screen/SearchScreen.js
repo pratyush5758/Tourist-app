@@ -12,25 +12,33 @@ import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {IMAGES} from '../assets';
+import { useNavigation } from '@react-navigation/native';
 const SearchScreen = () => {
+  const navigation = useNavigation();
   const Advanture = [
     {
       id: 'Adv_1',
       Title: 'Waduk Wonorejo',
       Image: IMAGES.ADVENTURE1,
       Icon: <AntDesign name="hearto" size={24} color="#708DBB" />,
+      duration: '3 hours',
+rate: '3.5 out of 5',
     },
     {
       id: 'Adv_2',
       Title: 'Waduk Wonorejo',
-      Image: IMAGES.ADVENTURE1,
+      Image: IMAGES.ADVENTURE3,
       Icon: <AntDesign name="hearto" size={24} color="#708DBB" />,
+      duration: '3 hours',
+      rate: '4 out of 5',
     },
     {
       id: 'Adv_3',
       Title: 'Waduk Wonorejo',
       Image: IMAGES.ADVENTURE1,
       Icon: <AntDesign name="hearto" size={24} color="#708DBB" />,
+      duration: '3 hours',
+      rate: '3.9 out of 5',
     },
   ];
 
@@ -54,7 +62,7 @@ const SearchScreen = () => {
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           renderItem={({item}) => (
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('DetailsScreen', {Detail:item})}>
               <View style={styles.SecndContainer}>
                 <ImageBackground
                   style={styles.ImageBackground}
