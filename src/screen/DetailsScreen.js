@@ -16,7 +16,7 @@ import {IMAGES} from '../assets';
 const DetailsScreen = () => {
   const route = useRoute();
   return (
-    <SafeAreaView style={{backgroundColor: '#fff'}}>
+    <SafeAreaView style={{backgroundColor: '#fff', flex:1}}>
       <ScrollView>
         <View>
           <ImageBackground
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderTopLeftRadius: 27,
     borderTopRightRadius: 27,
-    height: 400,
+    
   },
   titletext: {
     fontSize: 20,
@@ -285,6 +285,7 @@ const styles = StyleSheet.create({
   },
   maintextview:{
     marginHorizontal:20,
+    marginVertical:20
     
   },
   maintext:{
